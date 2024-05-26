@@ -11,7 +11,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const req = await fetch("https://bulk-email-tool-b-k.vercel.app/api/register", {
+    const req = await fetch("https://bulk-email-be.onrender.com/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: await JSON.stringify({
@@ -59,7 +59,7 @@ const Register = () => {
     </div>
     <div>
       <br/>
-        <p>If you have  already registered then <a href="https://bulk-email-tool-f-e.vercel.app/login">click here</a>.
+        <p>If you have  already registered then <a href="https://bulk-email-be.onrender.com/login">click here</a>.
           or copy and paste the following on browser to navigate to login. </p>
           <p>https://bulk-email-tool-f-e.vercel.app/login</p>
     </div>

@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   const populateDashboard = async () => {
     const token = localStorage.getItem("token");
-    const req = await fetch("https://bulk-email-tool-b-k.vercel.app/api/dashboard", {
+    const req = await fetch("https://bulk-email-be.onrender.com/api/dashboard", {
       headers: { "x-access-token": token },
     });
 
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     const token = localStorage.getItem("token");
 
-    const req = await fetch("https://bulk-email-tool-b-k.vercel.app/api/dashboard", {
+    const req = await fetch("https://bulk-email-be.onrender.com/api/dashboard", {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-access-token": token },
       body: await JSON.stringify({
