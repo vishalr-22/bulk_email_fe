@@ -21,7 +21,7 @@ const Dashboard = () => {
 
     const data = await req.json();
 
-    if (data.status == "ok") {
+    if (data.status === "ok") {
       setGoal(data.goal);
     } else {
       alert("Invalid Token");
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
     const data = await req.json();
 
-    if (data.status == "ok") {
+    if (data.status === "ok") {
       setGoal(tempGoal);
       setTempGoal("");
     } else {

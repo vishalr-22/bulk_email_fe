@@ -22,7 +22,7 @@ const Login = () => {
 
     const data = await req.json();
 
-    if (data.status == "ok") {
+    if (data.status === "ok") {
       localStorage.setItem("token", data.token);
       alert("Logged in successfully")
       navigate("/dashboard");
@@ -44,7 +44,7 @@ const Login = () => {
 
     const data = await req.json();
 
-    if (data.status == "ok") {
+    if (data.status === "ok") {
       setGoal(data.goal);
     } else {
       alert("Invalid Token");

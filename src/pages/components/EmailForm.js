@@ -13,8 +13,8 @@ export default function EmailForm() {
     to = to.trim();
     to = to.split(',');
     console.log(to);
-    if(to.length==1){
-    if (email_to.value.length == 0 || subject.value.length == 0 || message.value.length == 0)
+    if(to.length===1){
+    if (email_to.value.length === 0 || subject.value.length === 0 || message.value.length === 0)
         submit.type = 'submit';
     else {
         submit.type = 'submit';
@@ -30,7 +30,7 @@ export default function EmailForm() {
                       })
         }).then(response => response.json()).then(data => {
             
-            if (data.result == 'success') {
+            if (data.result === 'success') {
                 mail_data.innerHTML = `Email was successfully sent to ${to[0]}<br>` + mail_data.innerHTML;
                 console.log(data);
             }
@@ -44,7 +44,7 @@ export default function EmailForm() {
         for(let i = 0; i<to.length;i++){
        
     
-    if (email_to.value.length == 0 || subject.value.length == 0 || message.value.length == 0)
+    if (email_to.value.length === 0 || subject.value.length === 0 || message.value.length === 0)
         submit.type = 'submit';
     else {
         submit.type = 'submit';
@@ -60,7 +60,7 @@ export default function EmailForm() {
                       })
         }).then(response => response.json()).then(data => {
             
-            if (data.result == 'success') {
+            if (data.result === 'success') {
                 mail_data.innerHTML = `Email was successfully sent to ${to[i]}<br>` + mail_data.innerHTML;
                 console.log(data);
             }
